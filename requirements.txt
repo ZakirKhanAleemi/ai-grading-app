@@ -1,0 +1,9 @@
+streamlit
+pandas
+google-generativeai
+python-docx
+Pillow
+openpyxl
+PyMuPDF
+py7zr
+rarfile
