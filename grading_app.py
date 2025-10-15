@@ -369,4 +369,3 @@ if st.session_state.results_df is not None:
         st.download_button("📥 Download Results as Excel", excel_data, 'grading_report.xlsx')
 else:
     st.info("Results will be displayed here after the grading process is complete.")
-
