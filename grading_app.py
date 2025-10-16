@@ -289,29 +289,13 @@ with st.sidebar:
 
     st.header("1. Define the Rubric")
     updated_rubric = """
-Flowchart:0 points-No genuine attempt,1 points-Minimal or unclear,2 points-Mostly complete, minor omissions,3 points-Clear, complete flowchart
-High-level Pseudocode:0 points-No genuine attempt, or irrelevant,1 points-Partially accurate or incomplete,2 points-Accurate, logical, and reflects flowchart
-Feature - Menu structure:0 points-Menu missing or non-functional,1 points-Menu incomplete or loop breaks,2 points-Menu mostly correct, minor issues,3 points-Menu shows all options, validates input, repeats until Exit
-Feature - Welcome message contents:0 points-No genuine attempt,1 points-Missing one or more required components,2 points-Shows program name, student name, and student ID
-Feature - Input handling and storage:0 points-Does not collect or store details,1 points-One or more fields missing,2 points-Collects all fields, minor edge cases fail,3 points-Collects and persists all usage details correctly
-Feature - Display current usage:0 points-No genuine attempt,1 points-Partial attempt, labels/units unclear,2 points-Clearly displays all details with labels/units
-Feature - Plan costs - Correct cost calculations:0 points-Missing or incorrect,1 points-Formula partially implemented or hard-coded,3 points-Reasonable attempt, significant unit errors,4 points-Generally correct, minor errors,5 points-Uses correct Base + Extras formula
-Feature - Plan costs - Display costs:0 points-No genuine attempt,1 points-Minimal attempt,3 points-Reasonable attempt, some plans missing or unclear,4 points-All plans shown, minor formatting issues,5 points-Displays every plan clearly with currency/units
-Feature - Cheapest Plan:0 points-No genuine attempt,3 points-Occasional incorrect selection,7 points-Identifies cheapest plan but ignores roaming,10 points-Correctly identifies cheapest plan considering roaming
-Code quality - Naming scheme:0 points-Significant issues,1 points-Inconsistent naming,2 points-Consistent and appropriate naming
-Code quality - Comments:0 points-No comments,1 points-Some comments missing or misleading,2 points-Appropriate use of comments
-Code quality - Cleanliness:0-No structure,1-Difficult to navigate,2-Clean and interpretable structure
-Optional extension 1 - Load plan from JSON/XML:0-Not attempted,1-Correctly loaded
-Optional extension 2 - SQLite:0-Not attempted,1-Saves to SQLite, no stats,2-Saves to SQLite and shows stats
-Deductions - Statement of completion:-1-Not included,0-Included
-Deductions - Statement of assistance:-1-Not included,0-Included
-Deductions - List of references:-1-Not included,0-Included
+
 """
     rubric = st.text_area("Paste the grading rubric here:", value=updated_rubric, height=300)
 
     assignment_context = st.text_area(
         "Provide context for the assignment:",
-        value="A first-year Python programming assignment. Students must create a tool to recommend a mobile phone plan based on usage data. The submission should include a Python script (or code in the report) and a Word/PDF document with a flowchart and pseudocode."
+        value=""
     )
 
     st.header("2. Upload Assignments")
@@ -369,3 +353,4 @@ if st.session_state.results_df is not None:
         st.download_button("📥 Download Results as Excel", excel_data, 'grading_report.xlsx')
 else:
     st.info("Results will be displayed here after the grading process is complete.")
+
